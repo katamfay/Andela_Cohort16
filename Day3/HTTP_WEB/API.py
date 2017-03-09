@@ -1,15 +1,14 @@
-request_data = requests.get("http://www.cucirca.com/2009/05/27/watch-true-blood-online/")
-print (request_data.text)
 
-r = requests.put('http://www.cucirca.com/2009/05/27/watch-true-blood-online/', data = {'key':'value'})
-print(r.text)
-r = requests.delete('http://www.cucirca.com/2009/05/27/watch-true-blood-online/delete')
-print(r.text)
-r = requests.head('http://www.cucirca.com/2009/05/27/watch-true-blood-online/get')
-print(r.text)
-r = requests.options('http://www.cucirca.com/2009/05/27/watch-true-blood-online/get')
-print(r.text)
-r = requests.post("http://www.cucirca.com/2009/05/27/watch-true-blood-online/post", data=payload)
-print(r.text)
+from urllib.request import url
+import json
 
 
+def find_movie():
+
+	Movies = "https://www.themoviedb.org/"
+	request_movie = urlopen(Movies)
+	Find_Movie = request_movie.read().decode("https://www.themoviedb.org/")
+	json_object = json.loads(Find_Movie)
+	print(json.dumps(json_objects))
+
+find_movie()	
